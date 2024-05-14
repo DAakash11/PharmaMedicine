@@ -1,0 +1,334 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24 Jan, 2024, 11:37:30 AM
+    Author     : au
+*/
+
+:root {
+    --text-01: #45413E;
+    --light-01: #F9F9F9;
+    --light-02: #FFFFFF;
+    --brand-01: #DB7F67;
+    --brand-02: #F4CFC6;
+    --card-hover: 0px 4px 24px rgba(0, 0, 0, 0.15);
+    --card-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    --hover-timing: all 0.2s ease;
+    --nav-card-size: 240px;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    transition: var(--hover-timing);
+    background: var(--light-01);
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+header {
+    height: auto;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    color: var(--text-01);
+    font-weight: 600;
+    height: 64px;
+    background: lightgray;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+nav ul.navigation-menu {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: center;
+    position: relative;
+    top: 0;
+}
+
+nav .navigation-menu a {
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--text-01);
+}
+
+nav .navigation-menu > li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav .navigation-menu > li > a {
+    position: relative;
+    padding: 0 20px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+nav .navigation-menu > li:hover ul.subnav {
+    visibility: visible;
+    opacity: 1;
+    top: 64px;
+}
+
+
+nav .navigation-menu > li > ul.subnav {
+    /*    border: 1px solid green;*/
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 66px;
+    background: var(--light-01);
+    box-shadow: var(--card-hover);
+    border-radius: 12px;
+    opacity: 0;
+    transition: var(--hover-timing);
+}
+
+
+nav > #logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    grid-gap: 8px;
+    line-height: 100%;
+}
+
+nav > #utility {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    grid-gap: 16px;
+}
+
+.active{
+    min-height:688px;
+    background-color: #F4CFC6;
+    border-radius: 20px;
+    margin: 50px;
+}
+
+.filler{
+	width:100%;
+	height:50px;
+	backgroud-color: transparent;
+}
+
+.filler2{
+	width:100%;
+	height:30px;
+	backgroud-color: transparent;
+}
+
+h2{
+	text-align: center;
+	padding: 20px 0 20px 0;
+}
+
+.card {
+	width:340px;
+	height: auto;
+  	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  	transition: 0.3s;
+  	margin: 0 auto;
+  	text-align:center;
+  	padding: 4px 0 10px 0;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 2px rgba(0,0,0,0.2);
+}
+
+.space1{
+	font-size:24px;	
+}
+
+.filler3{
+	width:auto;
+	height:10px;
+}
+
+.space{
+	padding-top:10px;
+}
+.filler{
+    width:100%;
+    height:50px;
+    backgroud-color: transparent;
+}
+.filler2{
+    width:100%;
+    height:30px;
+    backgroud-color: transparent;
+}
+.bigcard {
+  width: 80%;
+  padding: 0 10px 10px 10px;
+  display: inline-block;
+  border-radius:10px;
+}
+
+.bigcard input[type="text"],.bigcard input[type="date"]
+{
+    position:relative;
+    padding: 5px;
+    box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.2);
+    border: 1px solid black;
+    border-radius:5px;
+    outline: none;
+    color: black;
+    height: 25px;
+    background: White;
+    font-size: 18px;
+    text-align:left;	
+}
+
+.bigcard p{
+    padding:10px 0 10px 0;
+}
+.bigcard input[type="text"]{
+    position: realtive;
+    padding: 5px;
+    box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.2);
+    border: 1px solid black;
+    border-radius:5px;
+    outline: none;
+    color: black;
+    height: 25px;
+    background: White;
+    font-size: 18px;
+    text-align:left;
+}
+.bigcard input[type="submit"] {
+    height: 35px;
+    width: 220px;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+    border-radius:5px;
+    background-color: #0ca1a6;
+    color: white;
+    border:1px solid #0ca1a6;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.bigcard input[type="submit"]:hover{
+    background-color: #4CAF50;
+    border:1px solid #4CAF50;
+    color: white;
+}
+
+
+.column {
+  float: left;
+  width: 22%;
+  padding: 0 10px;
+}
+
+.row {margin: 0 0;}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: sans-serif;
+  background-color: rgba(20,220,220,0.1);
+}
+
+.card img{
+    padding-top: 50px;
+    background-color: white;
+}
+
+.card p{
+	padding: 0;
+	padding-bottom: 7px;
+	margin:0;
+}
+
+.card input[type="number"]{
+	border: 1px solid #808080;
+	border-radius:3px;
+	background-color: white;
+	text-align: center;	
+	color:black;
+	-webkit-appearance: none; 
+}
+
+.card input[type=number]::-webkit-inner-spin-button, 
+.card input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+.card:hover{
+	box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+}
+table {
+  width: 100%;
+}
+th {
+  padding: 15px;
+  text-align: left;
+  background-color: #0ca1a6;
+  color: white;
+}
+
+tr,td{
+  padding: 15px 5px 15px 15px;
+  text-align: left;
+}
